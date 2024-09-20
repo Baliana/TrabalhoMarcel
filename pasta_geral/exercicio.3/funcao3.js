@@ -4,23 +4,22 @@
 * Autor:fernando*
 ************************************************************/
 function tabuada(tabuadaInicial, tabuadafinal, contadorInicial, contadorFinal){
-    let tabuadaInicial
-    let tabuadafinal
-    let contadorInicial
-    let contadorFinal
+    let tabuadaI = tabuadaInicial
+    let tabuadaF = tabuadafinal
+    let contadorI = contadorInicial
+    let contadorF = contadorFinal
     let status = true
 
-    if(tabuadaInicial == '' || tabuadafinal == ''|| contadorInicial == ''|| contadorFinal==''){
+    if(tabuadaI == '' || tabuadaF == ''|| contadorI == ''|| contadorF==''){
         console.log('ERRO:Todos os campos devem ser preenchido.')
         status = false
-    }else if(isNaN(tabuadaInicial)||isNaN(tabuadafinal)||isNaN(contadorInicial)||isNaN(contadorFinal)){
+    }else if(isNaN(tabuadaI)||isNaN(tabuadaF)||isNaN(contadorI)||isNaN(contadorF)){
         console.log('ERRO:Todos os campos devem ser preenchido.')
         status = false
-    }else if(tabuadaInicial < 2 ||  tabuadaInicial > 100 || tabuadafinal <2 || tabuadafinal >100 ){
+    }else if(tabuadaI < 2 ||  tabuadaI > 100 || tabuadaF <2 || tabuadaF >100 ){
         console.log
         status = true
-    }else if(isNaN(nota1 <0 || nota1 >100 || nota2 <0 || nota2 >100 ||nota3 <0 || nota3 >100 || nota4 <0 || nota4 >100 ||){
-
+   
     }
 }
 
@@ -28,25 +27,24 @@ function tabuada(tabuadaInicial, tabuadafinal, contadorInicial, contadorFinal){
     let tabuadaI = Number(tabuadaInicial)
     let tabuadaF = Number(tabuadafinal)
     let contadorI = Number(contadorInicial)
-    let contadorF 
+    let contadorF = Number(contadorFinal)
     let status =  true 
     let resultado
 
-    while(tabuadaInicial <= tabuadafinal){
-        console.log (`tabuada ${tabuadaInicial}` )
+    while(tabuadaI <= tabuadaF){
+        console.log (`tabuada ${tabuadaI}` )
 
-        while(contadorI <=contadorF){
+        while(contadorI <= contadorF){
             status = true
             resultado = tabuadaI * contadorI
-            console.log('${tabuadaI} * ${contador} - ${resultado}')
+            console.log(`${tabuadaI} * ${contadorI} = ${resultado}`)
             contadorI +=1
             contadorI + contadorF
         }
-        contadorI + contadorInicial
-        tabuada += 1
+        contadorI = Number(contadorInicial)
+        tabuadaI += 1
     }
     return status
 }
 
-tabuada(2,7,8,10)
-validarDados
+tabuada(2,7,1,10)
